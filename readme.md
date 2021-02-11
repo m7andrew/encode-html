@@ -9,6 +9,8 @@ jpm install https://github.com/m7andrew/encode-html
 
 ## Examples
 
+Simple HTML structure:
+
 ```clojure
 (import html)
 
@@ -23,14 +25,15 @@ jpm install https://github.com/m7andrew/encode-html
   <span>Hello</span>
 </div>
 ```
-> Simple HTML structure
+
+Loop using `html/each`:
 
 ```clojure
 (import html)
 
 (def todos 
   ["Write some janet code"
-   "Make a sandwitch"
+   "Make a sandwich"
    "Find the lost city of Atlantis"])
 
 (html/encode 
@@ -38,14 +41,15 @@ jpm install https://github.com/m7andrew/encode-html
     (html/each item todos
       [:li {} item])])
 ```
-> Loop using `html/each`
+
+Loop using `map`:
 
 ```clojure
 (import html)
 
 (def todos 
   ["Write some janet code"
-   "Make a sandwitch"
+   "Make a sandwich"
    "Find the lost city of Atlantis"])
 
 (defn todo [item]
@@ -54,16 +58,16 @@ jpm install https://github.com/m7andrew/encode-html
 (html/encode 
   [:ul {} ;(map todo todos)])
 ```
-> Loop using `map`
+
+Result using either method:
 
 ```html
 <ul>
   <li>Write some janet code</li>
-  <li>Make a sandwitch</li>
+  <li>Make a sandwich</li>
   <li>Find the lost city of Atlantis</li>
 </ul>
 ```
-> Result using either method
 
 ## Functions
 
