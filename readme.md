@@ -1,4 +1,6 @@
 
+# Encode HTML
+
 A small [Janet](https://janet-lang.org) library to create HTML strings from Janet data structures. Similar to Clojure's [Hiccup](https://github.com/weavejester/hiccup).
 
 ## Install
